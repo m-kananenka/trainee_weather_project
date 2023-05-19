@@ -3,8 +3,8 @@ package server
 import (
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 	"log"
-	"trainee_weather_project/telegram_service/internal/config"
-	"trainee_weather_project/telegram_service/internal/service"
+	"telegram_service/internal/config"
+	"telegram_service/internal/service"
 )
 
 type Telegram struct {

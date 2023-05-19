@@ -2,9 +2,9 @@ package main
 
 import (
 	"github.com/sirupsen/logrus"
-	"trainee_weather_project/telegram_service/internal/config"
-	"trainee_weather_project/telegram_service/internal/server"
-	"trainee_weather_project/telegram_service/internal/service"
+	"telegram_service/internal/config"
+	"telegram_service/internal/server"
+	"telegram_service/internal/service"
 )
 
 func main() {
