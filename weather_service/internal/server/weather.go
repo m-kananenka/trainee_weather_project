@@ -1,60 +1,44 @@
 package server
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/sirupsen/logrus"
-	"net/http"
-	"trainee_weather_project/weather_service/internal/config"
+	"google.golang.org/grpc"
+	"log"
+	"net"
+	"weather_service/gRPC/proto/pb"
+	"weather_service/internal/config"
+	"weather_service/internal/service"
 )
 
 type WeatherServer struct {
-	logger *logrus.Logger
-	cfg    *config.Config
-	client http.Client
+	logger  *logrus.Logger
+	cfg     *config.Config
+	client  *grpc.Server
+	service *service.GRPCServer
 }
 
-func NewWeatherServer(logger *logrus.Logger, cfg *config.Config) *WeatherServer {
+func NewWeatherServer(logger *logrus.Logger, cfg *config.Config, service *service.GRPCServer) *WeatherServer {
 	return &WeatherServer{
-		logger: logger,
-		cfg:    cfg,
-		client: http.Client{},
+		logger:  logger,
+		cfg:     cfg,
+		client:  grpc.NewServer(),
+		service: service,
 	}
 }
 
-type respBody struct {
-	Main struct {
-		Temp float64 `json:"temp"`
-	} `json:"main"`
+func (w *WeatherServer) Register() {
+
+	w.client.RegisterService(&pb.GetWeather_ServiceDesc, w.service)
 }
 
-func (w WeatherServer) GetTemp(city string) {
+func (w *WeatherServer) Start() {
 
-	resp, err := w.client.Get(fmt.Sprintf(w.cfg.URL, w.cfg.APIKey, city))
+	l, err := net.Listen("tcp", w.cfg.Port)
 	if err != nil {
-		w.logger.Printf("request to openweathermap failed: %s\n", err.Error())
+		log.Fatal(err)
 	}
 
-	var data respBody
-	err = json.NewDecoder(resp.Body).Decode(&data)
-	if err != nil {
-		w.logger.Printf("failed to decode response body: %s\n", err.Error())
+	if err := w.client.Serve(l); err != nil {
+		log.Fatal(err)
 	}
-
-	fmt.Printf("City: %s, Temp: %.1f\n", city, kelvinToCelsius(data.Main.Temp))
-
-}
-
-func kelvinToCelsius(temp float64) float64 {
-	const kelvinConstant = 273
-	return temp - kelvinConstant
-}
-
-func (w WeatherServer) PrintTemps() []string {
-	cities := []string{"Minsk", "Gomel", "Mogilev", "Brest", "Grodno", "Vitebsk"}
-	for i := range cities {
-
-		w.GetTemp(cities[i])
-	}
-	return cities
 }

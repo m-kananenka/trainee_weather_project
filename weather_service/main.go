@@ -2,8 +2,9 @@ package main
 
 import (
 	"github.com/sirupsen/logrus"
-	"trainee_weather_project/weather_service/internal/config"
-	"trainee_weather_project/weather_service/internal/server"
+	"weather_service/internal/config"
+	"weather_service/internal/server"
+	"weather_service/internal/service"
 )
 
 func main() {
@@ -15,8 +16,11 @@ func main() {
 		logger.Fatal(err)
 	}
 
-	serv := server.NewWeatherServer(logger, &cfg)
+	service := service.NewGRPCServer(&cfg, logger)
 
-	serv.PrintTemps()
+	serv := server.NewWeatherServer(logger, &cfg, service)
+
+	serv.Register()
+	serv.Start()
 
 }
