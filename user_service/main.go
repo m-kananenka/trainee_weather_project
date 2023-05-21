@@ -42,7 +42,11 @@ func main() {
 
 	srv := server.NewServer(cfg.Port, initEngine(), logger, controller, cfg)
 
+	srv.Register()
+
 	srv.RegisterRoutes()
+	go srv.StartGRPC()
+
 	srv.StartRouter()
 
 }

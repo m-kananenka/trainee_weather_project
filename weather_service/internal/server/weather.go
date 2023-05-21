@@ -5,7 +5,7 @@ import (
 	"google.golang.org/grpc"
 	"log"
 	"net"
-	"weather_service/gRPC/proto/pb"
+	"weather_service/api/pb"
 	"weather_service/internal/config"
 	"weather_service/internal/service"
 )

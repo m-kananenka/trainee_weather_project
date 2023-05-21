@@ -4,28 +4,35 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="679c39a5-60ab-40aa-a62f-b5df3939ef13" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/telegram_service/gRPC/pb/weather.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/telegram_service/gRPC/pb/weather_grpc.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/telegram_service/gRPC/weather.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weather_service/gRPC/proto/pb/weather.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weather_service/gRPC/proto/pb/weather_grpc.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weather_service/gRPC/proto/weather.proto" afterDir="false" />
+    <list default="true" id="679c39a5-60ab-40aa-a62f-b5df3939ef13" name="Changes" comment="change tg cfg">
+      <change afterPath="$PROJECT_DIR$/telegram_service/cmd/user/pb/user.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/telegram_service/cmd/user/pb/user_grpc.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/telegram_service/cmd/user/user.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/telegram_service/internal/service/auth.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/api/pb/user.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/api/pb/user_grpc.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/api/user.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/internal/user/service/gRPC.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/telegram_service/.envconfig" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_service/.envconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/telegram_service/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_service/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/telegram_service/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_service/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/telegram_service/internal/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_service/internal/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/telegram_service/gRPC/pb/weather.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_service/cmd/weather/pb/weather.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/telegram_service/gRPC/pb/weather_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_service/cmd/weather/pb/weather_grpc.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/telegram_service/gRPC/weather.proto" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_service/cmd/weather/weather.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/telegram_service/internal/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_service/internal/server/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/telegram_service/internal/service/telegram.go" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_service/internal/service/telegram.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/telegram_service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_service/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_service/.envconfig" beforeDir="false" afterPath="$PROJECT_DIR$/weather_service/.envconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_service/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/weather_service/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_service/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/weather_service/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_service/internal/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/weather_service/internal/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_service/.envconfig" beforeDir="false" afterPath="$PROJECT_DIR$/user_service/.envconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_service/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/user_service/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_service/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/user_service/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_service/internal/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_service/internal/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_service/internal/user/server/register.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_service/internal/user/server/register.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_service/internal/user/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_service/internal/user/server/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_service/internal/user/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_service/internal/user/service/service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_service/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_service/gRPC/proto/pb/weather.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/weather_service/api/pb/weather.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_service/gRPC/proto/pb/weather_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/weather_service/api/pb/weather_grpc.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_service/gRPC/proto/weather.proto" beforeDir="false" afterPath="$PROJECT_DIR$/weather_service/api/weather.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weather_service/internal/server/weather.go" beforeDir="false" afterPath="$PROJECT_DIR$/weather_service/internal/server/weather.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weather_service/internal/service/weather.go" beforeDir="false" afterPath="$PROJECT_DIR$/weather_service/internal/service/weather.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/weather_service/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +50,16 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="grpc" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2PsPqDI43Ds9wCJ9oK3pIwFbloO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -69,20 +79,25 @@
     &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/4650/go/src/trainee_weather_project&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/4650/go/src/trainee_weather_project/telegram_service/cmd/user&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;goland.project.structure&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\4650\go\src\trainee_weather_project\telegram_service\cmd\user" />
+      <recent name="C:\Users\4650\go\src\trainee_weather_project\telegram_service\cmd_user" />
+      <recent name="C:\Users\4650\go\src\trainee_weather_project\user_service\api" />
+      <recent name="C:\Users\4650\go\src\trainee_weather_project\telegram_service\cmd" />
       <recent name="C:\Users\4650\go\src\trainee_weather_project\telegram_service\gRPC" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\4650\go\src\trainee_weather_project\telegram_service\cmd\weather" />
       <recent name="C:\Users\4650\go\src\trainee_weather_project\weather_service\internal\service" />
       <recent name="C:\Users\4650\go\src\trainee_weather_project\weather_service\gRPC\proto\pb" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build weather_service">
+  <component name="RunManager" selected="Go Build.go build telegram_service">
     <configuration name="go build telegram_service" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Trainee_weather_project" />
       <working_directory value="$PROJECT_DIR$/telegram_service" />
@@ -101,6 +116,26 @@
       <package value="telegram_service" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$/telegram_service/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build user_service" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Trainee_weather_project" />
+      <working_directory value="$PROJECT_DIR$/user_service" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="true" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+          <ENTRY IS_ENABLED="true" PARSER="env" IS_EXECUTABLE="false" PATH="user_service/.envconfig" />
+        </ENTRIES>
+      </EXTENSION>
+      <kind value="PACKAGE" />
+      <package value="user_service" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/user_service/main.go" />
       <method v="2" />
     </configuration>
     <configuration name="go build weather_service" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -124,13 +159,15 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Go Build.go build user_service" />
       <item itemvalue="Go Build.go build telegram_service" />
       <item itemvalue="Go Build.go build weather_service" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build weather_service" />
         <item itemvalue="Go Build.go build telegram_service" />
+        <item itemvalue="Go Build.go build weather_service" />
+        <item itemvalue="Go Build.go build user_service" />
       </list>
     </recent_temporary>
   </component>
@@ -148,6 +185,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add grpc tg and weather" />
+    <MESSAGE value="change tg cfg" />
+    <option name="LAST_COMMIT_MESSAGE" value="change tg cfg" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

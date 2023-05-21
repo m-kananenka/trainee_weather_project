@@ -17,5 +17,5 @@ type DB struct {
 }
 
 func (c *Config) Process() error {
-	return envconfig.Process("example", c)
+	return envconfig.Process("user", c)
 }

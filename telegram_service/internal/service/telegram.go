@@ -5,33 +5,33 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 	"log"
-	"telegram_service/gRPC/pb"
+	pb2 "telegram_service/cmd/weather/pb"
 )
 
 type TgService struct{}
 
-func (s TgService) GetWeather() string {
+func (t TgService) GetWeather(city string) (string, error) {
 
 	conn, err := grpc.Dial("localhost:8083", grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		log.Printf("Failed to connect: %v", err)
+		return "", err
 	}
 	defer conn.Close()
 
 	// Создание клиентского экземпляра
-	client := pb.NewGetWeatherClient(conn)
+	weatherClient := pb2.NewGetWeatherClient(conn)
 
-	// Вызов удаленной процедуры
-	req := &pb.Request{
-		User:    "World",
-		Weather: "gege",
+	//Вызов удаленной процедуры
+	req := &pb2.Request{
+		City: city,
 	}
 
-	res, err := client.Get(context.Background(), req)
+	res, err := weatherClient.Get(context.Background(), req)
 	if err != nil {
-		log.Printf("Failed to call MyMethod: %v", err)
-		return "something wrong"
+		log.Printf("Failed to call GetWeather: %v", err)
+		return "", err
 	}
 
-	return res.String()
+	return res.String(), nil
 }

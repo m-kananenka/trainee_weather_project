@@ -17,9 +17,11 @@ func main() {
 		logger.Fatal(err)
 	}
 
+	authService := service.NewAuthService()
+
 	tgService := service.TgService{}
 
-	tgConnect := server.NewTelegram(&cfg, &tgService)
+	tgConnect := server.NewTelegram(&cfg, &tgService, authService)
 
 	tgConnect.Start()
 }

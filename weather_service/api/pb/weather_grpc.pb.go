@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             v4.23.0
-// source: weather.proto
+// source: user.proto
 
 package pb
 
@@ -15,7 +15,7 @@ import (
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-// Requires gRPC-Go v1.32.0 or later.
+// Requires cmd-Go v1.32.0 or later.
 const _ = grpc.SupportPackageIsVersion7
 
 // GetWeatherClient is the client API for GetWeather service.
@@ -101,5 +101,5 @@ var GetWeather_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "weather.proto",
+	Metadata: "user.proto",
 }
