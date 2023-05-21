@@ -8,14 +8,16 @@ import (
 )
 
 type Telegram struct {
-	cfg       *config.Config
-	tgService *service.TgService
+	cfg         *config.Config
+	tgService   *service.TgService
+	authService *service.AuthService
 }
 
-func NewTelegram(cfg *config.Config, tgService *service.TgService) Telegram {
+func NewTelegram(cfg *config.Config, tgService *service.TgService, auth *service.AuthService) Telegram {
 	return Telegram{
-		cfg:       cfg,
-		tgService: tgService,
+		cfg:         cfg,
+		tgService:   tgService,
+		authService: auth,
 	}
 }
 
@@ -38,9 +40,19 @@ func (t *Telegram) Start() {
 		if update.Message != nil {
 			log.Printf("[%s] %s", update.Message.From.UserName, update.Message.Text)
 
-			weather := t.getWeather()
+			var message string
+			if t.authService.CheckAuth(update.Message.Chat.ID) {
+				message = t.GetWeather(update, err)
+			} else {
+				if t.authService.Auth(update.Message.Text, update.Message.Chat.ID) {
+					message = "You are successfully authorized. \nSelect the city where you want to know the weather. " +
+						"\nFor example: Minsk"
+				} else {
+					message = "Write correct login and password, please"
+				}
+			}
 
-			msg := tgbotapi.NewMessage(update.Message.Chat.ID, weather)
+			msg := tgbotapi.NewMessage(update.Message.Chat.ID, message)
 			msg.ReplyToMessageID = update.Message.MessageID
 
 			bot.Send(msg)
@@ -48,8 +60,17 @@ func (t *Telegram) Start() {
 	}
 }
 
-func (t *Telegram) getWeather() string {
-	weather := t.tgService.GetWeather()
+func (t *Telegram) GetWeather(update tgbotapi.Update, err error) string {
+	var message string
 
-	return weather
+	if update.Message.Text != "" {
+		message, err = t.tgService.GetWeather(update.Message.Text)
+		if err != nil || message == "" {
+			message = "Incorrect input"
+		}
+
+	} else {
+		message = "Write city please"
+	}
+	return message
 }

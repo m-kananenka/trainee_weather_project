@@ -8,5 +8,5 @@ type Config struct {
 }
 
 func (c *Config) Process() error {
-	return envconfig.Process("example", c)
+	return envconfig.Process("telegram", c)
 }

@@ -5,7 +5,10 @@ import (
 	"github.com/labstack/echo"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/net/context"
+	"google.golang.org/grpc"
+	"net"
 	"net/http"
+	"user_service/api/pb"
 	"user_service/internal/config"
 	"user_service/internal/errorstore"
 	"user_service/internal/user/converter"
@@ -20,6 +23,7 @@ type controller interface {
 	DeleteUser(ctx context.Context, id string) error
 	GetAllUsers(ctx context.Context) ([]model.User, error)
 	Authorize(ctx context.Context, login, password string) (string, error)
+	Get(ctx context.Context, req *pb.Request) (*pb.Response, error)
 }
 
 type Server struct {
@@ -28,6 +32,7 @@ type Server struct {
 	r         *echo.Echo
 	c         controller
 	cfg       *config.Config
+	client    *grpc.Server
 }
 
 func NewServer(listenURI string, r *echo.Echo, logger *logrus.Logger, c controller, cfg *config.Config) *Server {
@@ -37,6 +42,21 @@ func NewServer(listenURI string, r *echo.Echo, logger *logrus.Logger, c controll
 		r:         r,
 		c:         c,
 		cfg:       cfg,
+		client:    grpc.NewServer(),
+	}
+}
+
+func (s *Server) Register() {
+	s.client.RegisterService(&pb.UserService_ServiceDesc, s.c)
+}
+func (s *Server) StartGRPC() {
+	l, err := net.Listen("tcp", "localhost:8085")
+	if err != nil {
+		s.logger.Fatal(err)
+	}
+
+	if err = s.client.Serve(l); err != nil {
+		s.logger.Fatal(err)
 	}
 }
 
@@ -49,6 +69,7 @@ func (s *Server) StartRouter() {
 	err := srv.ListenAndServe()
 	if err != nil {
 		s.logger.Fatal(err)
+
 	}
 }
 

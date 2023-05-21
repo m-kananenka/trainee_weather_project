@@ -7,6 +7,7 @@ import (
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/google/uuid"
 	"time"
+	"user_service/api/pb"
 	"user_service/internal/config"
 	"user_service/internal/user/model"
 )
@@ -89,4 +90,14 @@ func (c *Controller) Authorize(ctx context.Context, login, password string) (str
 		return "", fmt.Errorf("failed to sigh token: %w", err)
 	}
 	return tokenString, nil
+}
+
+//gPRC
+
+func (c *Controller) Get(ctx context.Context, req *pb.Request) (*pb.Response, error) {
+	_, err := c.repo.CheckAuth(ctx, req.GetLogin(), req.GetPassword())
+	if err != nil {
+		return &pb.Response{Response: false}, err
+	}
+	return &pb.Response{Response: true}, nil
 }
