@@ -48,7 +48,8 @@ func (t *Telegram) Start() {
 					message = "You are successfully authorized. \nSelect the city where you want to know the weather. " +
 						"\nFor example: Minsk"
 				} else {
-					message = "Write correct login and password, please"
+					message = "First of all, you should log in.\nWrite correct login and password, please" +
+						"\n For example: name password"
 				}
 			}
 

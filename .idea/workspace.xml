@@ -5,39 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="679c39a5-60ab-40aa-a62f-b5df3939ef13" name="Changes" comment="change tg cfg">
-      <change afterPath="$PROJECT_DIR$/telegram_service/cmd/user/pb/user.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/telegram_service/cmd/user/pb/user_grpc.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/telegram_service/cmd/user/user.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/telegram_service/internal/service/auth.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user_service/api/pb/user.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user_service/api/pb/user_grpc.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user_service/api/user.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user_service/internal/user/service/gRPC.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/go.imports.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/telegram_service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/telegram_service/example_envconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/example_envconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/internal/user/mock/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/internal/user/mock/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/internal/user/repository/repository_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/internal/user/server/server_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/internal/user/service/service_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather_service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weather_service/internal/example_envconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/telegram_service/gRPC/pb/weather.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_service/cmd/weather/pb/weather.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/telegram_service/gRPC/pb/weather_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_service/cmd/weather/pb/weather_grpc.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/telegram_service/gRPC/weather.proto" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_service/cmd/weather/weather.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/telegram_service/internal/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_service/internal/server/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/telegram_service/internal/service/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_service/internal/service/auth.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/telegram_service/internal/service/telegram.go" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_service/internal/service/telegram.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/telegram_service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_service/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_service/.envconfig" beforeDir="false" afterPath="$PROJECT_DIR$/user_service/.envconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/user_service/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user_service/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/user_service/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user_service/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/user_service/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_service/internal/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_service/internal/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_service/internal/user/converter/convertor.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_service/internal/user/converter/convertor.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_service/internal/user/repository/repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_service/internal/user/repository/repository.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user_service/internal/user/server/register.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_service/internal/user/server/register.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user_service/internal/user/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_service/internal/user/server/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_service/internal/user/service/gRPC.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/user_service/internal/user/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_service/internal/user/service/service.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user_service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_service/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_service/gRPC/proto/pb/weather.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/weather_service/api/pb/weather.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_service/gRPC/proto/pb/weather_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/weather_service/api/pb/weather_grpc.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_service/gRPC/proto/weather.proto" beforeDir="false" afterPath="$PROJECT_DIR$/weather_service/api/weather.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_service/internal/server/weather.go" beforeDir="false" afterPath="$PROJECT_DIR$/weather_service/internal/server/weather.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_service/internal/service/weather.go" beforeDir="false" afterPath="$PROJECT_DIR$/weather_service/internal/service/weather.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -50,7 +52,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="grpc" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -67,22 +69,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/4650/go/src/trainee_weather_project/telegram_service/cmd/user&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;goland.project.structure&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "C:/Users/4650/go/src/meetup",
+    "settings.editor.selected.configurable": "goland.project.structure"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\4650\go\src\trainee_weather_project\telegram_service\cmd\user" />
@@ -97,77 +100,92 @@
       <recent name="C:\Users\4650\go\src\trainee_weather_project\weather_service\gRPC\proto\pb" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build telegram_service">
-    <configuration name="go build telegram_service" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.go test user_service/internal/user/service (1)">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="Trainee_weather_project" />
-      <working_directory value="$PROJECT_DIR$/telegram_service" />
-      <EXTENSION ID="net.ashald.envfile">
-        <option name="IS_ENABLED" value="true" />
-        <option name="IS_SUBST" value="false" />
-        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
-        <option name="IS_IGNORE_MISSING_FILES" value="false" />
-        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
-        <ENTRIES>
-          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
-          <ENTRY IS_ENABLED="true" PARSER="env" IS_EXECUTABLE="false" PATH="telegram_service/.envconfig" />
-        </ENTRIES>
-      </EXTENSION>
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
       <kind value="PACKAGE" />
-      <package value="telegram_service" />
+      <package value="trainee_weather_project" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/telegram_service/main.go" />
+      <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build user_service" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
       <module name="Trainee_weather_project" />
-      <working_directory value="$PROJECT_DIR$/user_service" />
-      <EXTENSION ID="net.ashald.envfile">
-        <option name="IS_ENABLED" value="true" />
-        <option name="IS_SUBST" value="false" />
-        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
-        <option name="IS_IGNORE_MISSING_FILES" value="false" />
-        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
-        <ENTRIES>
-          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
-          <ENTRY IS_ENABLED="true" PARSER="env" IS_EXECUTABLE="false" PATH="user_service/.envconfig" />
-        </ENTRIES>
-      </EXTENSION>
-      <kind value="PACKAGE" />
-      <package value="user_service" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="DIRECTORY" />
+      <package value="trainee_weather_project" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/user_service/main.go" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="go build weather_service" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go test user_service/internal/user/repository (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Trainee_weather_project" />
-      <working_directory value="$PROJECT_DIR$/weather_service" />
-      <EXTENSION ID="net.ashald.envfile">
-        <option name="IS_ENABLED" value="true" />
-        <option name="IS_SUBST" value="false" />
-        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
-        <option name="IS_IGNORE_MISSING_FILES" value="false" />
-        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
-        <ENTRIES>
-          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
-          <ENTRY IS_ENABLED="true" PARSER="env" IS_EXECUTABLE="false" PATH="weather_service/.envconfig" />
-        </ENTRIES>
-      </EXTENSION>
+      <working_directory value="$PROJECT_DIR$/user_service/internal/user/repository" />
+      <root_directory value="$PROJECT_DIR$/user_service" />
       <kind value="PACKAGE" />
-      <package value="weather_service" />
+      <package value="user_service/internal/user/repository" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/weather_service/main.go" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test user_service/internal/user/server" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Trainee_weather_project" />
+      <working_directory value="$PROJECT_DIR$/user_service/internal/user/server" />
+      <root_directory value="$PROJECT_DIR$/user_service" />
+      <kind value="PACKAGE" />
+      <package value="user_service/internal/user/server" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test user_service/internal/user/service (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Trainee_weather_project" />
+      <working_directory value="$PROJECT_DIR$/user_service/internal/user/service" />
+      <root_directory value="$PROJECT_DIR$/user_service" />
+      <kind value="PACKAGE" />
+      <package value="user_service/internal/user/service" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test user_service/internal/user/service" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Trainee_weather_project" />
+      <working_directory value="$PROJECT_DIR$/user_service/internal/user/service" />
+      <root_directory value="$PROJECT_DIR$/user_service" />
+      <kind value="PACKAGE" />
+      <package value="user_service/internal/user/service" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run-migration-down" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/user_service/makefile" target="run-migration-down" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.go build user_service" />
-      <item itemvalue="Go Build.go build telegram_service" />
-      <item itemvalue="Go Build.go build weather_service" />
+      <item itemvalue="Go Test.go test user_service/internal/user/repository (1)" />
+      <item itemvalue="Go Test.go test user_service/internal/user/server" />
+      <item itemvalue="Go Test.go test user_service/internal/user/service (1)" />
+      <item itemvalue="Go Test.go test user_service/internal/user/service" />
+      <item itemvalue="Makefile Target.run-migration-down" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build telegram_service" />
-        <item itemvalue="Go Build.go build weather_service" />
-        <item itemvalue="Go Build.go build user_service" />
+        <item itemvalue="Go Test.go test user_service/internal/user/service (1)" />
+        <item itemvalue="Go Test.go test user_service/internal/user/repository (1)" />
+        <item itemvalue="Go Test.go test user_service/internal/user/server" />
+        <item itemvalue="Makefile Target.run-migration-down" />
+        <item itemvalue="Go Test.go test user_service/internal/user/service" />
       </list>
     </recent_temporary>
   </component>
@@ -195,11 +213,99 @@
     <settings-migrated>true</settings-migrated>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/user_service/internal/user/server/server.go</url>
+          <line>125</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/user_service/internal/user/server/server.go</url>
+          <line>97</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/user_service/internal/user/server/server_test.go</url>
+          <line>230</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/user_service/internal/user/server/server.go</url>
+          <line>95</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/user_service/internal/user/server/server_test.go</url>
+          <line>144</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/user_service/internal/user/server/server.go</url>
+          <line>86</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="GoApplicationRunConfiguration">
         <watch expression="*(*&quot;net/http.Response&quot;)(824635385680)" />
         <watch expression="*(*&quot;string&quot;)(824633935744)" />
       </configuration>
+      <configuration name="GoTestRunConfiguration">
+        <watch expression="*(*&quot;user_service/internal/user/repository.user&quot;)(824634474032)" />
+        <watch expression="*(*&quot;user_service/internal/user/model.User&quot;)(824634211816)" />
+        <watch expression="*(*&quot;user_service/internal/user/mock.Mockrepository&quot;)(824634285888)" />
+        <watch expression="*(*&quot;net/http.Client&quot;)(824635893056)" />
+        <watch expression="*(*&quot;string&quot;)(824635477472)" />
+        <watch expression="*(*&quot;user_service/internal/user/server/dto.UserDto&quot;)(824635883600)" />
+        <watch expression="createdUser" />
+      </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestController_UpdateUser_in_user_service_internal_user_service__2_.out" NAME="TestController_UpdateUser in user_service/internal/user/service (2) Coverage Results" MODIFIED="1685980054757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$go_test_user_service_internal_user_server__1_.out" NAME="go test user_service/internal/user/server (1) Coverage Results" MODIFIED="1686595810372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestUserRepo_GetUser_in_user_service_internal_user_repository__2_.out" NAME="TestUserRepo_GetUser in user_service/internal/user/repository (2) Coverage Results" MODIFIED="1685642310015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestController_Authorize_in_user_service_internal_user_service__1_.out" NAME="TestController_Authorize in user_service/internal/user/service (1) Coverage Results" MODIFIED="1685912654527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$go_test_user_service_internal_user_service__1_.out" NAME="go test user_service/internal/user/service (1) Coverage Results" MODIFIED="1686659890189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestController_UpdateUser_in_user_service_internal_user_service.out" NAME="TestController_UpdateUser in user_service/internal/user/service Coverage Results" MODIFIED="1686168977752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestUserRepo_DeleteUser_in_user_service_internal_user_repository.out" NAME="TestUserRepo_DeleteUser in user_service/internal/user/repository Coverage Results" MODIFIED="1685889838401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestController_Create_in_user_service_internal_user_service__2_.out" NAME="TestController_Create in user_service/internal/user/service (2) Coverage Results" MODIFIED="1685798897659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestUserRepo_CreateUser_in_user_service_internal_user_repository.out" NAME="TestUserRepo_CreateUser in user_service/internal/user/repository Coverage Results" MODIFIED="1685803650776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestServer_DeleteUser_in_user_service_internal_user_server.out" NAME="TestServer_DeleteUser in user_service/internal/user/server Coverage Results" MODIFIED="1686595716023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$go_test_user_service_internal_user_repository.out" NAME="go test user_service/internal/user/repository Coverage Results" MODIFIED="1686596575572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestServer_GetUser_in_user_service_internal_user_server__3_.out" NAME="TestServer_GetUser in user_service/internal/user/server (3) Coverage Results" MODIFIED="1686483802682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestController_DeleteUser_in_user_service_internal_user_service.out" NAME="TestController_DeleteUser in user_service/internal/user/service Coverage Results" MODIFIED="1686484297459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestUserRepo_GetUser_in_user_service_internal_user_repository.out" NAME="TestUserRepo_GetUser in user_service/internal/user/repository Coverage Results" MODIFIED="1685804386932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestController_Create_in_user_service_internal_user_service__1_.out" NAME="TestController_Create in user_service/internal/user/service (1) Coverage Results" MODIFIED="1685822714227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$go_test_user_service_internal_user_repository__1_.out" NAME="go test user_service/internal/user/repository (1) Coverage Results" MODIFIED="1686659874895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestController_GetAllUsers_in_user_service_internal_user_service.out" NAME="TestController_GetAllUsers in user_service/internal/user/service Coverage Results" MODIFIED="1686168925212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestServer_DeleteUser_in_user_service_internal_user_server__1_.out" NAME="TestServer_DeleteUser in user_service/internal/user/server (1) Coverage Results" MODIFIED="1686490050742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestServer_Create_in_user_service_internal_user_server__1_.out" NAME="TestServer_Create in user_service/internal/user/server (1) Coverage Results" MODIFIED="1686595637913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestServer_DeleteUser_in_user_service_internal_user_server__2_.out" NAME="TestServer_DeleteUser in user_service/internal/user/server (2) Coverage Results" MODIFIED="1686489992371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestUserRepo_CreateUser_in_user_service_internal_user_repository__1_.out" NAME="TestUserRepo_CreateUser in user_service/internal/user/repository (1) Coverage Results" MODIFIED="1685702691041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestUserRepo_GetUser_in_user_service_internal_user_repository__1_.out" NAME="TestUserRepo_GetUser in user_service/internal/user/repository (1) Coverage Results" MODIFIED="1685822907315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestController_GetUser_in_user_service_internal_user_service__1_.out" NAME="TestController_GetUser in user_service/internal/user/service (1) Coverage Results" MODIFIED="1685910894266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestController_Create_in_user_service_internal_user_service.out" NAME="TestController_Create in user_service/internal/user/service Coverage Results" MODIFIED="1686575397166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestController_Get_in_user_service_internal_user_service__2_.out" NAME="TestController_Get in user_service/internal/user/service (2) Coverage Results" MODIFIED="1685887598837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestController_GetAllUsers_in_user_service_internal_user_service__1_.out" NAME="TestController_GetAllUsers in user_service/internal/user/service (1) Coverage Results" MODIFIED="1685892525864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestController_DeleteUser_in_user_service_internal_user_service__1_.out" NAME="TestController_DeleteUser in user_service/internal/user/service (1) Coverage Results" MODIFIED="1686168964901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestServer_GetUser_in_user_service_internal_user_server__1_.out" NAME="TestServer_GetUser in user_service/internal/user/server (1) Coverage Results" MODIFIED="1686584916002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestUserRepo_CheckAuth_in_user_service_internal_user_repository.out" NAME="TestUserRepo_CheckAuth in user_service/internal/user/repository Coverage Results" MODIFIED="1685809063314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestUserRepo_GetAllUsers_in_user_service_internal_user_repository.out" NAME="TestUserRepo_GetAllUsers in user_service/internal/user/repository Coverage Results" MODIFIED="1685811633767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestController_Authorize_in_user_service_internal_user_service.out" NAME="TestController_Authorize in user_service/internal/user/service Coverage Results" MODIFIED="1686168936322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$go_test_user_service_internal_user_server.out" NAME="go test user_service/internal/user/server Coverage Results" MODIFIED="1686650663258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestController_GetUser_in_user_service_internal_user_service.out" NAME="TestController_GetUser in user_service/internal/user/service Coverage Results" MODIFIED="1686168985245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$go_test_user_service_internal_user_service.out" NAME="go test user_service/internal/user/service Coverage Results" MODIFIED="1686596591138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestServer_DeleteUser_in_user_service_internal_user_server__3_.out" NAME="TestServer_DeleteUser in user_service/internal/user/server (3) Coverage Results" MODIFIED="1686501099777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestController_Get_in_user_service_internal_user_service.out" NAME="TestController_Get in user_service/internal/user/service Coverage Results" MODIFIED="1685821571573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestServer_GetUser_in_user_service_internal_user_server.out" NAME="TestServer_GetUser in user_service/internal/user/server Coverage Results" MODIFIED="1686595661220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestUserRepo_UpdateUser_in_user_service_internal_user_repository.out" NAME="TestUserRepo_UpdateUser in user_service/internal/user/repository Coverage Results" MODIFIED="1685873845893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestController_DeleteUser_in_user_service_internal_user_service__2_.out" NAME="TestController_DeleteUser in user_service/internal/user/service (2) Coverage Results" MODIFIED="1685980071718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestServer_GetUser_in_user_service_internal_user_server__2_.out" NAME="TestServer_GetUser in user_service/internal/user/server (2) Coverage Results" MODIFIED="1686414596686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestServer_Create_in_user_service_internal_user_server.out" NAME="TestServer_Create in user_service/internal/user/server Coverage Results" MODIFIED="1686586639826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$TestController_UpdateUser_in_user_service_internal_user_service__1_.out" NAME="TestController_UpdateUser in user_service/internal/user/service (1) Coverage Results" MODIFIED="1685979667300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/trainee_weather_project$go_test_user_service_internal_user_service__2_.out" NAME="go test user_service/internal/user/service (2) Coverage Results" MODIFIED="1686294937904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

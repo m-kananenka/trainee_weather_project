@@ -12,8 +12,10 @@ import (
 	"user_service/internal/user/model"
 )
 
+//go:generate mockgen -source ./service.go -destination ../mock/service.go -package mock
+
 type repository interface {
-	AddUser(ctx context.Context, modelUser model.User) error
+	CreateUser(ctx context.Context, user model.User) error
 	GetUser(ctx context.Context, id string) (model.User, error)
 	UpdateUser(ctx context.Context, user model.User) error
 	DeleteUser(ctx context.Context, id string) error
@@ -33,17 +35,16 @@ func NewController(repo repository, cfg *config.Config) *Controller {
 	}
 }
 
-func (c *Controller) Create(context context.Context, user *model.User) (*model.User, error) {
+func (c *Controller) Create(ctx context.Context, user *model.User) error {
 	if user.Name == "" {
-		return nil, errors.New("name is a vital field")
+		return errors.New("name is a vital field")
 	}
 	user.ID = uuid.New().String()
-	i := *user
-	return nil, c.repo.AddUser(context, i)
+	return c.repo.CreateUser(ctx, *user)
 }
 
-func (c *Controller) GetUser(context context.Context, id string) (model.User, error) {
-	return c.repo.GetUser(context, id)
+func (c *Controller) GetUser(ctx context.Context, id string) (model.User, error) {
+	return c.repo.GetUser(ctx, id)
 }
 
 func (c *Controller) UpdateUser(ctx context.Context, user model.User) error {
@@ -78,7 +79,7 @@ func (c *Controller) Authorize(ctx context.Context, login, password string) (str
 		Issuer:    user.ID,
 		Subject:   "authorized",
 		Audience:  nil,
-		ExpiresAt: jwt.NewNumericDate(now.Add(24 * time.Hour)),
+		ExpiresAt: jwt.NewNumericDate(now.Add(1 * time.Hour)),
 		NotBefore: jwt.NewNumericDate(now),
 		IssuedAt:  jwt.NewNumericDate(now),
 		ID:        user.ID,
