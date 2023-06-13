@@ -1,3 +1,0 @@
-WEATHER_API_KEY=592ddec5b996fbe95cdd8a649ee3a92b
-WEATHER_URL=http://api.openweathermap.org/data/2.5/weather?appid=%s&q=%s
-WEATHER_PORT=:8083
