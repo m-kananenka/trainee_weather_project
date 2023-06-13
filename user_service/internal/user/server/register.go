@@ -5,10 +5,9 @@ import (
 )
 
 func (s *Server) RegisterRoutes() {
-	s.r.POST("/user/create", s.Create)
-
 	s.r.Use(middleware.Logger(s.logger))
 
+	s.r.POST("/user/create", s.Create)
 	s.r.GET("/user/auth", s.Authorize)
 
 	e := s.r.Group("/user")

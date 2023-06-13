@@ -10,7 +10,7 @@ import (
 
 type TgService struct{}
 
-func (t TgService) GetWeather(city string) (string, error) {
+func (t *TgService) GetWeather(city string) (string, error) {
 
 	conn, err := grpc.Dial("localhost:8083", grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
@@ -19,10 +19,8 @@ func (t TgService) GetWeather(city string) (string, error) {
 	}
 	defer conn.Close()
 
-	// Создание клиентского экземпляра
 	weatherClient := pb2.NewGetWeatherClient(conn)
 
-	//Вызов удаленной процедуры
 	req := &pb2.Request{
 		City: city,
 	}

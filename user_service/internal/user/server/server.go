@@ -1,6 +1,7 @@
 package server
 
 import (
+	"fmt"
 	"github.com/jinzhu/copier"
 	"github.com/labstack/echo"
 	"github.com/sirupsen/logrus"
@@ -16,8 +17,10 @@ import (
 	"user_service/internal/user/server/dto"
 )
 
+//go:generate mockgen -source ./server.go -destination ../mock/server.go -package mock
+
 type controller interface {
-	Create(context context.Context, user *model.User) (*model.User, error)
+	Create(context context.Context, user *model.User) error
 	GetUser(ctx context.Context, id string) (model.User, error)
 	UpdateUser(ctx context.Context, user model.User) error
 	DeleteUser(ctx context.Context, id string) error
@@ -81,14 +84,12 @@ func (s *Server) Create(ctx echo.Context) error {
 		return echo.NewHTTPError(http.StatusBadRequest, errorstore.BadRequest(err))
 	}
 
-	createdUser, err := s.c.Create(ctx.Request().Context(), converter.UserDtoToUser(&userDto))
+	err = s.c.Create(ctx.Request().Context(), converter.UserDtoToUser(&userDto))
 	if err != nil {
 		s.logger.Info("error parsing context during creating:", err)
 		return echo.NewHTTPError(http.StatusBadRequest, errorstore.BadRequest(err))
-	} else {
-		return echo.NewHTTPError(http.StatusCreated, createdUser)
 	}
-
+	return ctx.JSON(http.StatusCreated, err)
 }
 
 func (s *Server) GetUser(ctx echo.Context) error {
@@ -97,10 +98,9 @@ func (s *Server) GetUser(ctx echo.Context) error {
 	user, err := s.c.GetUser(ctx.Request().Context(), userID)
 	if err != nil {
 		s.logger.Info("could not get user:", err)
-		return echo.NewHTTPError(http.StatusBadRequest, errorstore.EntityNotFound(err))
-	} else {
-		return echo.NewHTTPError(http.StatusOK, converter.UserToUserDTO(&user))
+		return echo.NewHTTPError(http.StatusNotFound, errorstore.EntityNotFound(err))
 	}
+	return ctx.JSON(http.StatusOK, converter.UserToUserDTO(&user))
 }
 
 func (s *Server) UpdateUser(ctx echo.Context) error {
@@ -115,10 +115,9 @@ func (s *Server) UpdateUser(ctx echo.Context) error {
 	err = s.c.UpdateUser(ctx.Request().Context(), *converter.UserDtoToUser(&userDto))
 	if err != nil {
 		s.logger.Info("error parsing context during updating:", err)
-		return echo.NewHTTPError(http.StatusBadRequest, errorstore.EntityNotFound(err))
-	} else {
-		return echo.NewHTTPError(http.StatusOK, userDto)
+		return echo.NewHTTPError(http.StatusNotFound, errorstore.EntityNotFound(err))
 	}
+	return ctx.JSON(http.StatusOK, userDto)
 }
 
 func (s *Server) DeleteUser(ctx echo.Context) error {
@@ -127,11 +126,9 @@ func (s *Server) DeleteUser(ctx echo.Context) error {
 	err := s.c.DeleteUser(ctx.Request().Context(), userID)
 	if err != nil {
 		s.logger.Info("could not delete user:", err)
-		return echo.NewHTTPError(http.StatusBadRequest, errorstore.EntityNotFound(err))
-	} else {
-		return echo.NewHTTPError(http.StatusOK)
+		return echo.NewHTTPError(http.StatusNotFound, errorstore.EntityNotFound(err))
 	}
-
+	return ctx.JSON(http.StatusOK, fmt.Sprintf("user %s was successfully deleted", userID))
 }
 
 func (s *Server) GetAllUsers(ctx echo.Context) error {
@@ -140,13 +137,13 @@ func (s *Server) GetAllUsers(ctx echo.Context) error {
 
 	if err != nil {
 		s.logger.Info("could not get all users:", err)
-		return echo.NewHTTPError(http.StatusBadRequest, errorstore.EntityNotFound(err))
+		return echo.NewHTTPError(http.StatusNotFound, errorstore.EntityNotFound(err))
 	} else {
 		err := copier.Copy(&userDto, users)
 		if err != nil {
 			return err
 		}
-		return echo.NewHTTPError(http.StatusOK, userDto)
+		return ctx.JSON(http.StatusOK, userDto)
 	}
 }
 
@@ -162,8 +159,6 @@ func (s *Server) Authorize(ctx echo.Context) error {
 	if err != nil {
 		s.logger.Info("error parsing context during authorization:", err)
 		return echo.NewHTTPError(http.StatusBadRequest, errorstore.BadRequest(err))
-	} else {
-		return echo.NewHTTPError(http.StatusOK, token)
 	}
-
+	return ctx.JSON(http.StatusOK, fmt.Sprintf("Here is your token: %s", token))
 }

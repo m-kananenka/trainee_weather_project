@@ -45,7 +45,7 @@ func (u *UserRepo) RunMigrations() error {
 	return nil
 }
 
-func (u *UserRepo) AddUser(ctx context.Context, modelUser model.User) error {
+func (u *UserRepo) CreateUser(ctx context.Context, modelUser model.User) error {
 	query := `INSERT INTO users(id, name, description, login, password) VALUES (:id, :name, :description, :login, :password)`
 
 	user := convertUser(modelUser)
@@ -67,7 +67,7 @@ func (u *UserRepo) GetUser(ctx context.Context, id string) (model.User, error) {
 
 	err := row.StructScan(&us)
 	if err != nil {
-		return model.User{}, fmt.Errorf("failed to scan user: %w", err)
+		return model.User{}, fmt.Errorf("failed to scan user: %w ", err)
 	}
 
 	return us.toModel(), nil

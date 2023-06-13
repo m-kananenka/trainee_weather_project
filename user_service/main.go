@@ -40,18 +40,14 @@ func main() {
 
 	controller := service.NewController(userRepo, cfg)
 
-	srv := server.NewServer(cfg.Port, initEngine(), logger, controller, cfg)
+	srv := server.NewServer(cfg.Port, echo.New(), logger, controller, cfg)
 
 	srv.Register()
 
 	srv.RegisterRoutes()
+
 	go srv.StartGRPC()
 
 	srv.StartRouter()
 
-}
-
-func initEngine() *echo.Echo {
-	e := echo.New()
-	return e
 }

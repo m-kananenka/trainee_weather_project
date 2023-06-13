@@ -27,7 +27,6 @@ func (a *AuthService) CheckAuth(id int64) bool {
 	} else {
 		return false
 	}
-
 }
 
 func (a *AuthService) Auth(text string, id int64) bool {
@@ -44,10 +43,8 @@ func (a *AuthService) Auth(text string, id int64) bool {
 	}
 	defer conn.Close()
 
-	// Создание клиентского экземпляра
 	userClient := pb2.NewUserServiceClient(conn)
 
-	//Вызов удаленной процедуры
 	req := &pb2.Request{
 		Login:    login,
 		Password: password,
