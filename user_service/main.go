@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/jmoiron/sqlx"
+	"github.com/joho/godotenv"
 	"github.com/labstack/echo"
 	_ "github.com/lib/pq"
 	"github.com/sirupsen/logrus"
@@ -16,8 +17,13 @@ func main() {
 
 	logger := logrus.New()
 
+	err := godotenv.Load()
+	if err != nil {
+		logger.Fatal(err)
+	}
+
 	cfg := &config.Config{}
-	err := cfg.Process()
+	err = cfg.Process()
 	if err != nil {
 		logger.Fatal(err)
 	}

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/joho/godotenv"
 	"github.com/sirupsen/logrus"
 	"telegram_service/internal/config"
 	"telegram_service/internal/server"
@@ -12,7 +13,12 @@ func main() {
 
 	logger := logrus.New()
 
-	err := cfg.Process()
+	err := godotenv.Load()
+	if err != nil {
+		logger.Fatal(err)
+	}
+
+	err = cfg.Process()
 	if err != nil {
 		logger.Fatal(err)
 	}

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/joho/godotenv"
 	"github.com/sirupsen/logrus"
 	"weather_service/internal/config"
 	"weather_service/internal/server"
@@ -11,7 +12,12 @@ func main() {
 	cfg := config.Config{}
 	logger := logrus.New()
 
-	err := cfg.Process()
+	err := godotenv.Load()
+	if err != nil {
+		logger.Fatal(err)
+	}
+
+	err = cfg.Process()
 	if err != nil {
 		logger.Fatal(err)
 	}
